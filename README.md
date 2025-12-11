@@ -31,8 +31,8 @@ The project follows a clean **component-based architecture** and includes basic 
 ## ⚙️ Installation
 
 ```bash
-git clone <your-repo-url>
-cd <project-folder>
+git clone https://github.com/arafatmansuri/Account-Management.git
+cd Account-Management
 npm install
 npm start
 ```
