@@ -1,73 +1,86 @@
-# React + TypeScript + Vite
+# 🚀 React User Authentication App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple React application that provides **user registration**, **login**, **account management**, and **profile editing**, with all user data stored in **LocalStorage**.  
+The project follows a clean **component-based architecture** and includes basic **form validation** and **error handling**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## React Compiler
+- 🔐 User Registration
+- 🔑 User Login
+- 👤 My Account Page
+- ✏️ Edit User Profile
+- 💾 LocalStorage for storing user information
+- ⚛️ Component-based architecture
+- ⚠️ Error handling & input validations
+- 🔄 Persistent login using LocalStorage
+- 🎨 Clean and minimal UI
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **React**
+- **Typescript**
+- **LocalStorage API**
+- **Tailwind** (choose based on your project)
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## ⚙️ Installation
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+git clone <your-repo-url>
+cd <project-folder>
+npm install
+npm start
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🧩 How It Works
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### 🔹 Registration
+
+- User enters basic information.
+
+- Form validation checks empty fields and format.
+
+- User data is stored in LocalStorage as:
+
+- UserData = [{ "username": "", "password": "" }]
+
+### 🔹 Login
+
+- User enters username & password.
+
+- Credentials checked against LocalStorage.
+
+- If successful, the logged-in user is stored as:
+
+- CurrentUser = { "username": "", "email": "" }
+
+### 🔹 My Account
+
+- Displays user information
+
+- Allows user to logout
+
+- Provides navigation to Edit Profile
+
+### 🔹 Edit Profile
+
+- User updates information
+
+- Changes are saved back to LocalStorage
+
+### 🔹 Error Handling
+
+- Empty fields
+
+- Incorrect login credentials
+
+- Account already exists
+
+- success/error messages
