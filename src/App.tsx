@@ -1,7 +1,7 @@
-function App() {
-  return <div className="">
+import Login from "./pages/Login";
 
-      </div>;
+function App() {
+  return <Login />;
 }
 
 export default App;
